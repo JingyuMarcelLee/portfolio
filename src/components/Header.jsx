@@ -38,13 +38,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
   const styles = useStyles();
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   return (
     <AppBar style={{ background: "DimGrey" }} position="sticky">
       <Container maxwidth="md">
         <Toolbar disableGutters>
           <IconButton href="#about" className={styles.avatar}>
-            <Avatar alt="M.Lee" src={Icon} ></Avatar>  
+            <Avatar className={styles.avatar} src={Icon} imgProps={{loading: 'lazy'}}>
+            </Avatar>  
           </IconButton>
           <Hidden xsDown>
             {navigationLinks.map((item, idx) => (

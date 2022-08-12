@@ -7,7 +7,9 @@ import darkTheme from "../components/Theme"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
 
+
 export default function indexPage() {
+  
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />

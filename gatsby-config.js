@@ -8,7 +8,7 @@ module.exports = {
     author: `@JingyuMarcelLee`,
     siteLanguage: `en`,
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-material-ui", {
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
