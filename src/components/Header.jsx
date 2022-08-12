@@ -30,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     marginRight: "auto",
+    width: 40,
+    height: 40,
   }
 }));
 
@@ -41,7 +43,9 @@ export default function Header() {
     <AppBar style={{ background: "DimGrey" }} position="sticky">
       <Container maxwidth="md">
         <Toolbar disableGutters>
-          <Avatar alt="M.Lee" src={Icon} sx={{ width: 24, height: 24 }} className={styles.avatar}></Avatar>
+          <IconButton href="#about" className={styles.avatar}>
+            <Avatar alt="M.Lee" src={Icon} ></Avatar>  
+          </IconButton>
           <Hidden xsDown>
             {navigationLinks.map((item, idx) => (
               <Link
