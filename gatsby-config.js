@@ -1,7 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Marcel's Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Jingyu (Marcel) Lee`,
+    siteTitleAlt: `Marcel's Dev Portfolio`,
+    siteHeadline: `Marcel's Dev Portfolio`,
+    siteUrl: `https://jingyumarcellee.gatsbyjs.io/`,
+    description: `Jingyu(Marcel) Lee's Personal Portfolio Website`,
+    author: `@JingyuMarcelLee`,
+    siteLanguage: `en`,
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
