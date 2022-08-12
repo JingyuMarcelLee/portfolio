@@ -41,7 +41,7 @@ export default function Header() {
     <AppBar style={{ background: "DimGrey" }} position="sticky">
       <Container maxwidth="md">
         <Toolbar disableGutters>
-          <Avatar alt="M.Lee" src={Icon} className={styles.avatar}></Avatar>
+          <Avatar alt="M.Lee" src={Icon} sx={{ width: 24, height: 24 }} className={styles.avatar}></Avatar>
           <Hidden xsDown>
             {navigationLinks.map((item, idx) => (
               <Link
