@@ -20,18 +20,23 @@
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.8.4",
+    "@mui/styles": "^5.9.3",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.20.0",
     "gatsby-plugin-image": "^2.20.0",
-    "gatsby-plugin-material-ui": "^4.0.2",
+    "gatsby-plugin-material-ui": "^4.1.0",
     "gatsby-plugin-sharp": "^4.20.0",
     "gatsby-plugin-styled-components": "^5.20.0",
     "gatsby-plugin-typography": "^4.20.0",
     "gatsby-source-filesystem": "^4.20.0",
     "gatsby-transformer-sharp": "^4.20.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-typography": "^0.16.20",
     "styled-components": "^5.3.5"
-  }
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  },
+  "packageManager": "yarn@3.2.2"
 }

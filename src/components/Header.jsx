@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import Link from "@material-ui/core/Link";
-import { makeStyles } from "@material-ui/core/styles";
+import Link from "@mui/material/Link";
+import { styled } from "@mui/system";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Container from "@material-ui/core/Container";
-import Avatar from "@material-ui/core/Avatar";
-import Hidden from "@material-ui/core/Hidden";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Hidden from "@mui/material/Hidden";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 import Icon from "../images/icon.svg";
-import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import Divider from "@material-ui/core/Divider";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import Divider from "@mui/material/Divider";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 
 const navigationLinks = [
   { name: "About", href: "#about" },
@@ -21,19 +21,24 @@ const navigationLinks = [
   { name: "Contact", href: "" },
 ];
 
-const useStyles = makeStyles((theme) => ({
-  link: {
-    marginRight: 30,
-    padding: "4px",
-    fontFamily: "Arial",
-    fontSize: "12px",
-  },
-  avatar: {
-    marginRight: "auto",
+const linkStyle = styled(Link, {
+  name: "linkStyle",
+  slot: "Wrapper"
+})({
+  marginRight: 30,
+  padding: "4px",
+  fontFamily: "Arial",
+  fontSize: "12px",
+});
+
+const avatarStyle = styled(Avatar, {
+  name: "avatarStyle",
+  slot: "Wrapper"
+})({
+  marginRight: "auto",
     width: 40,
     height: 40,
-  }
-}));
+})
 
 
 export default function Header() {
@@ -44,21 +49,19 @@ export default function Header() {
       <Container maxwidth="md">
         <Toolbar disableGutters>
           <IconButton href="#about" className={styles.avatar}>
-            <Avatar className={styles.avatar} src={Icon} imgProps={{loading: 'lazy'}}>
-            </Avatar>  
+            <avatarStyle src={Icon} imgProps={{loading: 'lazy'}}>
+            </avatarStyle>  
           </IconButton>
           <Hidden xsDown>
             {navigationLinks.map((item, idx) => (
-              <Link
-                className={styles.link}
-                color="textPrimary"
+              <linkStyle
                 variant="button"
                 underline="none"
                 key={idx}
                 href={item.href}
               >
                 {item.name}
-              </Link>
+              </linkStyle>
             ))}
           </Hidden>
           <Hidden smUp>
@@ -75,24 +78,22 @@ export default function Header() {
         onClose={() => setOpen(false)}
       >
         <div>
-          <IconButton>
-            <ChevronRightIcon onClick={() => setOpen(false)} />
+          <IconButton onClick={() => setOpen(false)}>
+            <ChevronRightIcon />
           </IconButton>
         </div>
         <Divider />
         <List>
           {navigationLinks.map((item, i) => (
             <ListItem>
-              <Link
-                className={styles.link}
-                color="textPrimary"
+              <linkStyle
                 variant="button"
                 underline="none"
                 key={i}
                 href={item.href}
               >
                 {item.name}
-              </Link>
+              </linkStyle>
             </ListItem>
           ))}
         </List>
