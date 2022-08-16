@@ -8,7 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import Icon from "../images/icon.svg";
+import Icon from "../images/icon.png";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";

@@ -14,9 +14,10 @@ import IconButton from "@material-ui/core/IconButton";
 import nftImage from "../images/RoyaltyNFT.png";
 import stockImage from "../images/stockslack.png";
 import farmdataImage from "../images/farmdata.png";
-import Chip from "@material-ui/core/Chip";
-import Hidden from "@material-ui/core/Hidden";
+import Chip from "@mui/material/Chip";
+import Hidden from "@mui/material/Hidden";
 
+//need to refactort this
 const useStyles = makeStyles((theme) => ({
   cardMedia: {
     width: 180,
