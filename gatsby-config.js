@@ -9,10 +9,12 @@ module.exports = {
     siteLanguage: `en`,
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-layout`,
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-material-ui",
+    
     {
       resolve: "gatsby-source-filesystem",
       options: {
