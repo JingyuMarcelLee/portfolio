@@ -9,7 +9,6 @@ module.exports = {
     siteLanguage: `en`,
   },
   plugins: [
-    `gatsby-plugin-top-layout`,
     `gatsby-plugin-material-ui`,
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
