@@ -9,13 +9,14 @@ import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import nftImage from "../images/RoyaltyNFT.png";
 import stockImage from "../images/stockslack.png";
 import farmdataImage from "../images/farmdata.png";
 import Chip from "@mui/material/Chip";
 import Hidden from "@mui/material/Hidden";
+import darkTheme from "./Theme"
 
 //need to refactort this
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     borderRadius: "5px",
-    padding: "10px",
+    padding: "10px", 
   },
   links: {
     marginRight: "auto",
@@ -43,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 function TagsContainer({tags}) {
   const styles = useStyles()
   return (
+    <ThemeProvider theme={darkTheme}>
     <div>
       {tags.map((tag) => (
         <Chip
@@ -50,15 +52,19 @@ function TagsContainer({tags}) {
           label={tag}
           variant="outlined"
           key={tag}
+          color = "primary"
         ></Chip>
       ))}
     </div>
+    </ThemeProvider>
   );
 }
 
 function Project({ title, description, imageUrl, tags, links }) {
   const styles = useStyles();
   return (
+    
+
     <Grid item>
       <Card className={styles.card} variant="outlined">
         <div>
@@ -70,7 +76,7 @@ function Project({ title, description, imageUrl, tags, links }) {
               className={styles.description}
               variant="subtitle1"
               paragraph
-            >
+              >
               {description}
             </Typography>
             <Hidden mdUp>
@@ -81,9 +87,9 @@ function Project({ title, description, imageUrl, tags, links }) {
             <div className={styles.links}>
               {links.map((linkItem) => (
                 <IconButton
-                  href={linkItem.href}
-                  target="_blank"
-                  key={linkItem.href}
+                href={linkItem.href}
+                target="_blank"
+                key={linkItem.href}
                 >
                   <linkItem.icon />
                 </IconButton>
@@ -104,6 +110,7 @@ function Project({ title, description, imageUrl, tags, links }) {
 
 export default function Projects() {
   return (
+    
     <Container maxwidth="md" id="projects">
       <Box pt={8} mb={2}>
         <Typography variant="h4">Projects</Typography>
@@ -111,9 +118,10 @@ export default function Projects() {
       <Grid container direction="column" spacing={4}>
         {projectsData.map((data, idx) => (
           <Project {...data} key={idx} />
-        ))}
+          ))}
       </Grid>
     </Container>
+    
   );
 }
 
