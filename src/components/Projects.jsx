@@ -14,6 +14,7 @@ import IconButton from "@material-ui/core/IconButton";
 import nftImage from "../images/RoyaltyNFT.png";
 import stockImage from "../images/stockslack.png";
 import farmdataImage from "../images/farmdata.png";
+import dsImage from "../images/DSpng.png";
 import Chip from "@mui/material/Chip";
 import Hidden from "@mui/material/Hidden";
 import darkTheme from "./Theme"
@@ -112,8 +113,8 @@ export default function Projects() {
   return (
     
     <Container maxwidth="md" id="projects">
-      <Box pt={8} mb={2}>
-        <Typography variant="h4">Projects</Typography>
+      <Box pt={8} mb={6}>
+        <Typography variant="h4" align="center">Projects</Typography>
       </Box>
       <Grid container direction="column" spacing={4}>
         {projectsData.map((data, idx) => (
@@ -165,6 +166,20 @@ const projectsData = [
       {
         icon: GitHubIcon,
         href: "https://github.com/JingyuMarcelLee/StockAuto",
+      },
+    ],
+  },
+  {
+    title: "Data Structure Implementation",
+    description:
+      "Implementation of various data structures and algorithms using Python. Designed Abstract Base Classes to represent abstract data structures and used objected oriented design to create complex data structures.",
+    imageUrl: dsImage,
+    imageAlt: "Project 4 Image",
+    tags: ["Python"],
+    links: [
+      {
+        icon: GitHubIcon,
+        href: "https://github.com/JingyuMarcelLee/Data-Structure-Implementation",
       },
     ],
   },
