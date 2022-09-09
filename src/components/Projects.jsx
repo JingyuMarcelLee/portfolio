@@ -17,7 +17,8 @@ import farmdataImage from "../images/farmdata.png";
 import dsImage from "../images/DSpng.png";
 import Chip from "@mui/material/Chip";
 import Hidden from "@mui/material/Hidden";
-import darkTheme from "./Theme"
+import darkTheme from "./Theme";
+import susImage from "../images/gallery.jpg";
 
 //need to refactort this
 const useStyles = makeStyles((theme) => ({
@@ -65,7 +66,6 @@ function Project({ title, description, imageUrl, tags, links }) {
   const styles = useStyles();
   return (
     
-
     <Grid item>
       <Card className={styles.card} variant="outlined">
         <div>
@@ -127,6 +127,20 @@ export default function Projects() {
 }
 
 const projectsData = [
+  {
+    title: "susTrip",
+    description:
+      "SusTrip is a full-stack web application that records users' past trip information and respective carbon footprints. It aims to help users think more carefully about the mode of transportation they wish to take.",     
+    imageUrl: susImage,
+    imageAlt: "Project 5 Image",
+    tags: ["TypeScript", "React.js", "Next.js"],
+    links: [
+      {
+        icon: OpenInNewIcon,
+        href: "https://www.sustrip.tech/",
+      },
+    ],
+  },
   {
     title: "FarmData 2",
     description:
